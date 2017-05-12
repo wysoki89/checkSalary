@@ -1,0 +1,10 @@
+<div class="text-center">
+  <!--<a *ngFor="let company of companies"  [routerLink]="['/detail', hero.id]"  class="col-1-4">-->
+  
+  
+  <a *ngFor="let company of (companies | filteredCompanies:selectedName)">
+    <div>
+      <h4>{{company.name}}</h4>
+    </div>
+  </a>
+</div>
